@@ -3,7 +3,7 @@
 This is my portfolio of work. For each report, I have given some context to the goals of the report and a guide to who the target reader is. This varies from a person who stopped studying maths at 16 to someone with a MSc in Statistics.
 
 ## Reports
-+ [Bird Weights](www.bbc.co.uk)
++ [Bird Weights](https://www.bbc.co.uk)
   + Context: The brief was to take a supplied dataset of the mass of birds at four stages in their life, and analyse how this changes.
   + Client: A PhD student with very little statistical knowledge, but requested specific methods (t-tests and box plots) on the advice of their supervisor.
 + [Critical review of journal article](Github test.md)
