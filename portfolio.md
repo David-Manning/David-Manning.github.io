@@ -8,6 +8,9 @@ This is my portfolio of work. For each report, I have given some context to the 
   + Client: A PhD student with very little statistical knowledge, but requested specific methods (t-tests and box plots) on the advice of their supervisor.
 + Critical review of journal article
   + Context: The brief was to write a review of a published article about stepwise, a statistical method. My report is a summary of the article and my thoughts on its advice.
-+ Comparison of Gaussian Process Emulators vs Linear Interpolation - 
++ Comparison of Gaussian Process Emulators vs Linear Interpolation
   + Context: A manager in an engineering firm has found an article which gives a way to make running expensive computer models more efficient (BACCO). The models take several hours to run per set of inputs and always give the same result when run with the same set of inputs. My report describes how the method works and how they compare to the firm's existing linear interpolation method.
   + Client: The client understands undergraduate level mathematics.
++ Adolescents and deviance (with and without code)
+  + Context: Using mixed effects models to predict deviant behaviour in adolescents.
+  + Client: No particular client.
