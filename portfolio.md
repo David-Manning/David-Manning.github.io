@@ -15,6 +15,3 @@ This is my portfolio of work. For each report, I have given some context to the 
   + Context: Using mixed effects models to predict deviant behaviour in adolescents. This report also contains some `R` code and is a guide to using mixed effects models in `R`.
   + Client: No particular client.
 
-## Scripts with no Report
-+ [Imputing data with MICE](https://www.bbc.co.uk)
-  + This script uses the `MICE` package in `R` to impute missing values in a dataset.
