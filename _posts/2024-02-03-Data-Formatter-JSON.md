@@ -10,7 +10,7 @@ mathjax: true
 author: David Manning
 ---
 
-This prompt will turn a messy table (such as a table copy and pasted from the front end of a website) into a JSON format.
+This prompt will turn a messy table (such as a table copy and pasted from the front end of a website) into a JSON format. 
 
 If the row or column names are not always in the same format in every table you copy you might need to specify the element names.
 
