@@ -21,7 +21,10 @@ navbar-links:
     - Statistical Modeling, Causal Inference, and Social Science: "https://statmodeling.stat.columbia.edu/"
     - Beautiful Jekyll: "https://beautifuljekyll.com"
     - Learn markdown: "https://www.markdowntutorial.com/"
-
+    - Code Snippets: "tags#code"
+    - Prompts: "tags#prompts"
+    - Explanations: "tags#explanations"
+    - Test: "tags#pandabears"
 
 ################
 # --- Logo --- #
