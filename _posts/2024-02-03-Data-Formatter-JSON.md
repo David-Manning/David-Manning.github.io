@@ -16,7 +16,7 @@ If the row or column names are not always in the same format in every table you 
 
 A very large table may need multiple rows, in which case you can type "continue" and join the parts later.
 
-```yaml
+```
 Task:
 	Description: "Convert a table into JSON format based on specified requirements."
 	Rules:
