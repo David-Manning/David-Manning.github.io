@@ -21,6 +21,8 @@ author: David Manning
 
 navbar-links:
   About Me: "aboutme"
+  Blogroll: 
+    - Statistical Modeling, Causal Inference, and Social Science: "https://statmodeling.stat.columbia.edu/"
   Resources:
     - Beautiful Jekyll: "https://beautifuljekyll.com"
     - Learn markdown: "https://www.markdowntutorial.com/"
@@ -53,6 +55,7 @@ social-network-links:
   rss: true  # remove this line if you don't want to show an RSS link at the bottom
 #  facebook: deanattali
   github: David-Manning
+  notarealone: fakevalue
 #  twitter: daattali
 #  patreon: DeanAttali
 #  youtube: "@daattali"
