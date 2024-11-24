@@ -10,7 +10,7 @@ mathjax: true
 author: David Manning
 ---
 
-This prompt will turn *any* freeform prompt into a well formed TRACI prompt. It will fill in any gaps in the prompt itself so it will perform better if you give more requirements, but it isn't vital.
+This prompt will turn *any* freeform prompt into a well formed TRACI prompt and will even fill in any gaps in the base prompt.
 
 ```
 Your task:
