@@ -12,7 +12,7 @@ author: David Manning
 
 This prompt will turn a messy table (such as a table copy and pasted from the front end of a website) into a JSON format. 
 
-If the row or column names are not always in the same format in every table you copy you might need to specify the element names.
+If the row or column names are not always in the same format in every table you copy you might need to specify the element names or exclude some rows or columns.
 
 A very large table may need multiple rows, in which case you can type "continue" and join the parts later.
 
