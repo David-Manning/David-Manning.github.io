@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: TRACI Prompt Generator
 subtitle: Generates a TRACI Prompt
 gh-repo: David-Manning/David-Manning.github.io
