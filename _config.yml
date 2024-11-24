@@ -17,9 +17,8 @@ author: David Manning # Your name to show in the footer
 
 navbar-links:
   About Me: "aboutme"
-  Blogroll: 
-    - Statistical Modeling, Causal Inference, and Social Science: "https://statmodeling.stat.columbia.edu/"
   Resources:
+    - Statistical Modeling, Causal Inference, and Social Science: "https://statmodeling.stat.columbia.edu/"
     - Beautiful Jekyll: "https://beautifuljekyll.com"
     - Learn markdown: "https://www.markdowntutorial.com/"
 
