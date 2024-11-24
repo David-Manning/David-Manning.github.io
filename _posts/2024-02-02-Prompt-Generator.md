@@ -10,6 +10,7 @@ mathjax: true
 author: David Manning
 ---
 
+This prompt will turn *any* freeform prompt into a well formed TRACI prompt. It will fill in any gaps in the prompt itself so it will perform better if you give more requirements, but it isn't vital.
 
 ```
 Your task:
@@ -72,9 +73,3 @@ My freeform prompt:
 \*Enter prompt here\*
 ```
 
-Comments:
-
-* This prompt will turn *any* freeform prompt into a well formed TRACI prompt.
-* It will fill in the gaps with what it thinks is suitable so you may need to edit the output. 
-* Entering more information will make it work better out of the box however it will guess (usually pretty accurately).
-* Run it in a new chat window and if you want to run it again you can just type `Now do explain tort law` and it will go again.
