@@ -10,7 +10,7 @@ mathjax: true
 author: David Manning
 ---
 
-This prompt will turn *any* freeform prompt into a well formed TRACI prompt and will even fill in any gaps in the base prompt.
+Paste this prompt into a new chat, enter your freeform prompt at the bottom, and the LLM will convert it into a detailed TRACI prompt.
 
 ```
 Your task:
@@ -73,3 +73,11 @@ My freeform prompt:
 \*Enter prompt here\*
 ```
 
+
+## Usage Notes
+
+* You will get a better quality output more quickly if you give it more information up front, but you do not have to carefully structure your thoughts and prompts of just three or four words can be sufficient to get good quality output.
+* This prompt will fill in any gaps between what you have said and what should be included in a TRACI prompt using what it thinks best. This will usually result in it assuming you do not know anything on the topic unless it is told otherwise.
+* The LLM will **not** ask you to clarify anything and will go straight to what it thinks you wanted, although you can probably add a line that says to ask any clarifying questions.
+* Output may need checking because it may fill in the gaps in ways you didn’t want.
+* You can follow up with a new lazily written prompt like now do "explain tort law" and it will maintain the same quality of output.
