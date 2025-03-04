@@ -8,26 +8,17 @@ module:
 
 menu:
   main:
-    - name: Prompts
-      pageRef: /prompts
-      weight: 1
-    - name: Articles
-      pageRef: /articles
-      weight: 2
-    - name: About
-      pageRef: /
-      weight: 3
     - name: Search
-      weight: 4
+      weight: 1
       params:
         type: search
     - name: GitHub
-      weight: 5
+      weight: 2
       url: "https:/github.com/David-Manning"
       params:
         icon: github
     - name: LinkedIn
-      weight: 5
+      weight: 3
       url: "https://www.linkedin.com/in/dl-manning/"
       params:
         icon: linkedin
