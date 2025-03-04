@@ -1,18 +1,1 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>David Manning – Cheat Sheets</title>
-    <link>http://localhost:1313/cheat_sheets/</link>
-    <description>Recent content in Cheat Sheets on David Manning</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
-    
-	  <atom:link href="http://localhost:1313/cheat_sheets/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-      
-        
-      
-    
-    
-  </channel>
-</rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>David Manning – Cheat Sheets</title><link>https://David-Manning.github.io/cheat_sheets/</link><description>Recent content in Cheat Sheets on David Manning</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><atom:link href="https://David-Manning.github.io/cheat_sheets/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
