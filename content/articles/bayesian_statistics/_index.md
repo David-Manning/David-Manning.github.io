@@ -1,6 +1,6 @@
 +++
 title = 'Bayesian Statistics'
-draft = true
+draft = false
 toc = true
 type = 'docs'
 +++
