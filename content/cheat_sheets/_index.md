@@ -1,6 +1,6 @@
 +++
 title = 'Cheat Sheets'
-draft = true
+draft = false
 toc = true
 type = 'docs'
 +++
