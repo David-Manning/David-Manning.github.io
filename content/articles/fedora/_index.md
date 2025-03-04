@@ -1,4 +1,5 @@
 +++
 title = 'Fedora'
-draft = true
+draft = false
 +++
+This section is about managing and updating Fedora.
