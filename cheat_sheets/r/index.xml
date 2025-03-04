@@ -1,0 +1,111 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>David Manning – R</title><link>https://David-Manning.github.io/cheat_sheets/r/</link><description>Recent content in R on David Manning</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><atom:link href="https://David-Manning.github.io/cheat_sheets/r/index.xml" rel="self" type="application/rss+xml"/><item><title>Loading and Saving Data in R</title><link>https://David-Manning.github.io/cheat_sheets/r/loading_and_saving_data/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://David-Manning.github.io/cheat_sheets/r/loading_and_saving_data/</guid><description>
+&lt;p>Only the basic functionality is given - use &lt;code>?function_name&lt;/code> for details on loading specific parts.
+For reading CSV files, &lt;code>stringsAsFactors = FALSE&lt;/code> will load as a character string, which can be helpful, albeit more expensive in memory.&lt;/p>
+&lt;h3>CSV&lt;span class="hx-absolute -hx-mt-20" id="csv">&lt;/span>
+&lt;a href="#csv" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-r" data-lang="r">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Base R&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>df &lt;span style="color:#f92672">&amp;lt;-&lt;/span> &lt;span style="color:#a6e22e">read.csv&lt;/span>(file &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;/home/david/Documents/Temp/test.csv&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">write.csv&lt;/span>(x &lt;span style="color:#f92672">=&lt;/span> df, file &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;/home/david/Documents/Temp/test.csv&amp;#34;&lt;/span>, row.names &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">FALSE&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Tidyverse&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">library&lt;/span>(readr) &lt;span style="color:#75715e"># or library(tidyverse)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>df &lt;span style="color:#f92672">&amp;lt;-&lt;/span> readr&lt;span style="color:#f92672">::&lt;/span>&lt;span style="color:#a6e22e">read_csv&lt;/span>(file &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;/home/david/Documents/Temp/test.csv&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>readr&lt;span style="color:#f92672">::&lt;/span>&lt;span style="color:#a6e22e">write_csv&lt;/span>(x &lt;span style="color:#f92672">=&lt;/span> df, file &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;/home/david/Documents/Temp/test.csv&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># data.table&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">library&lt;/span>(data.table)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>df &lt;span style="color:#f92672">&amp;lt;-&lt;/span> data.table&lt;span style="color:#f92672">::&lt;/span> &lt;span style="color:#a6e22e">fread&lt;/span>(file &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;/home/david/Documents/Temp/test.csv&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>data.table&lt;span style="color:#f92672">::&lt;/span>&lt;span style="color:#a6e22e">fwrite&lt;/span>(x &lt;span style="color:#f92672">=&lt;/span> df, file &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;/home/david/Documents/Temp/test.csv&amp;#34;&lt;/span>)&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>JSON&lt;span class="hx-absolute -hx-mt-20" id="json">&lt;/span>
+&lt;a href="#json" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-r" data-lang="r">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">library&lt;/span>(jsonlite)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>df &lt;span style="color:#f92672">&amp;lt;-&lt;/span> jsonlite&lt;span style="color:#f92672">::&lt;/span>&lt;span style="color:#a6e22e">fromJSON&lt;/span>(txt &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;/home/david/Documents/Temp/test.json&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>jsonlite&lt;span style="color:#f92672">::&lt;/span>&lt;span style="color:#a6e22e">write_json&lt;/span>(x &lt;span style="color:#f92672">=&lt;/span> df, json &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;/home/david/Documents/Temp/test.json&amp;#34;&lt;/span>)&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Parquet&lt;span class="hx-absolute -hx-mt-20" id="parquet">&lt;/span>
+&lt;a href="#parquet" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-r" data-lang="r">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">library&lt;/span>(arrow)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>df &lt;span style="color:#f92672">&amp;lt;-&lt;/span> arrow&lt;span style="color:#f92672">::&lt;/span>&lt;span style="color:#a6e22e">read_parquet&lt;/span>(file &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;/home/david/Documents/Temp/test.parquet&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>arrow&lt;span style="color:#f92672">::&lt;/span>&lt;span style="color:#a6e22e">write_parquet&lt;/span>(x &lt;span style="color:#f92672">=&lt;/span> df, file &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;/home/david/Documents/Temp/test.parquet&amp;#34;&lt;/span>)&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Excel (xlsx)&lt;span class="hx-absolute -hx-mt-20" id="excel-xlsx">&lt;/span>
+&lt;a href="#excel-xlsx" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-r" data-lang="r">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">library&lt;/span>(openxlsx)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>openxlsx&lt;span style="color:#f92672">::&lt;/span>&lt;span style="color:#a6e22e">read.xlsx&lt;/span>(xlsxFile &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;/home/david/Documents/Temp/test.xlsx&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>openxlsx&lt;span style="color:#f92672">::&lt;/span>&lt;span style="color:#a6e22e">write.xlsx&lt;/span>(x &lt;span style="color:#f92672">=&lt;/span> df, file &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;/home/david/Documents/Temp/test.xlsx&amp;#34;&lt;/span>)&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Bulk Read&lt;span class="hx-absolute -hx-mt-20" id="bulk-read">&lt;/span>
+&lt;a href="#bulk-read" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>This loads multiple files in one directory (can include subdirectories). Any function or file type can be used as long as the first input is the file name.&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-r" data-lang="r">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">library&lt;/span>(readbulk)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>readbulk&lt;span style="color:#f92672">::&lt;/span>&lt;span style="color:#a6e22e">read_bulk&lt;/span>(
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> directory &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;/home/david/Documents/Test/&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> extension &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;.csv&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> verbose &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">FALSE&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> fun &lt;span style="color:#f92672">=&lt;/span> data.table&lt;span style="color:#f92672">::&lt;/span>fread,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> data &lt;span style="color:#f92672">=&lt;/span> df, &lt;span style="color:#75715e"># Add to an existing dataframe&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> subdirectories &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">TRUE&lt;/span> &lt;span style="color:#75715e"># FALSE to only include top level folder&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> )&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>S3&lt;span class="hx-absolute -hx-mt-20" id="s3">&lt;/span>
+&lt;a href="#s3" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>R does not have basic S3 functionality so this function needs to be used.&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-r" data-lang="r">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">library&lt;/span>(aws.s3)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>aws.s3&lt;span style="color:#f92672">::&lt;/span>&lt;span style="color:#a6e22e">s3read_using&lt;/span>(FUN &lt;span style="color:#f92672">=&lt;/span> fread, bucket &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;&amp;#34;&lt;/span>, object &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>aws.s3&lt;span style="color:#f92672">::&lt;/span>&lt;span style="color:#a6e22e">s3write_using&lt;/span>(x &lt;span style="color:#f92672">=&lt;/span> df, FUN &lt;span style="color:#f92672">=&lt;/span> fwrite, bucket &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;&amp;#34;&lt;/span>, object &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;&amp;#34;&lt;/span>)&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div></description></item><item><title>Percentages in ggplot2</title><link>https://David-Manning.github.io/cheat_sheets/r/percentages_in_ggplot2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://David-Manning.github.io/cheat_sheets/r/percentages_in_ggplot2/</guid><description>
+&lt;p>Use this syntax to format as percentages:&lt;/p>
+&lt;p>&lt;code>scale_x_continuous(labels = scales::percent_format())&lt;/code>&lt;/p>
+&lt;p>&lt;code>scale_y_continuous(labels = scales::percent_format())&lt;/code>&lt;/p>
+&lt;p>To go to 1 decimal place, use:&lt;/p>
+&lt;p>&lt;code>scale_x_continuous(labels = scales::percent_format(accuracy = 0.1))&lt;/code>&lt;/p>
+&lt;p>&lt;code>scale_y_continuous(labels = scales::percent_format(accuracy = 0.1))&lt;/code>&lt;/p></description></item></channel></rss>
