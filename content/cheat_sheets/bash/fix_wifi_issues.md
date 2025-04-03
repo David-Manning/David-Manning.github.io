@@ -19,9 +19,9 @@ This version will ask you for the password and give you the option to enter it w
 nmcli device wifi connect "wifi_name" -a
 ```
 
-This version will ask you for the password with it typed into the command.
+This version will ask you for the password with it typed into the command. The Wifi has to be visible.
 ```bash
-nmcli device wifi connect "wifi_name" "wifi_password"
+nmcli device wifi connect "wifi_name" password "wifi_password"
 ```
 
 This version will let you save a uuid, if you know it and are not in range of the WiFi connection. Note that it also autoconnects.
