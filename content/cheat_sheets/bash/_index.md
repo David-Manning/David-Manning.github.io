@@ -1,5 +1,5 @@
 +++
-title = 'Zsh'
+title = 'Bash / Zsh'
 draft = false
 toc = true
 type = 'docs'
